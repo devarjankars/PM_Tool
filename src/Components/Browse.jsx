@@ -8,6 +8,7 @@ import ResetPasword from './Auth/ResetPasword';
 import CalendarComponent from './Pages/CalendarView/CalendarComponent';
 import DashBoardLayout from './Layout/DashBoardLayout';
 import Ticket from './Pages/Ticket/Ticket'; 
+import FM from './Pages/pages/FM';
 
 function Browse (){
 
@@ -35,9 +36,29 @@ const appRoutes= createBrowserRouter([
           element:<Ticket/>
          },
          {
-          errorElement:'error',
+          errorElement:'/error',
           element:<>...Something went wrong</>
-         }
+         },
+         {
+          path:'resource-allocation',
+          element:<FM/>
+         },
+         {
+          path:'clients',
+          element:<FM/>
+         },
+         {
+          path:'projects',
+          element:<FM/>
+         },
+         {
+          path:'task',
+          element:<FM/>
+         },
+         {
+          path:'employee',
+          element:<FM/>
+         },
          
         ]
      },

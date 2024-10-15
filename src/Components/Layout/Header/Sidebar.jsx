@@ -11,22 +11,23 @@ import { HiTicket } from "react-icons/hi2";
 import { FaClipboardList } from "react-icons/fa";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { FaCalendarWeek } from "react-icons/fa6";
+
 // Sidebar component
 const Sidebar = ({isOpen, setIsOpen}) => {
     
   
   const sidebarSections = {
     admin: [
-      { name: 'Resource Allocation', link: '/resource-allocation', icon: <BiSolidUserDetail /> },
-      { name: 'Clients', link: '/clients', icon: <PiSuitcaseSimpleBold /> },
-      { name: 'Projects', link: '/projects', icon: <GoProjectRoadmap /> },
-      { name: 'Task', link: '/task', icon: <MdTask /> },
+      { name: 'Resource Allocation', link: 'resource-allocation', icon: <BiSolidUserDetail /> },
+      { name: 'Clients', link: 'clients', icon: <PiSuitcaseSimpleBold /> },
+      { name: 'Projects', link: 'projects', icon: <GoProjectRoadmap /> },
+      { name: 'Task', link: 'task', icon: <MdTask /> },
       { name: 'Employee', link: '/employee', icon: <PiUsersFill /> },
       { name: 'Reports', link: '/reports', icon: <BiSolidReport /> },
       { name: 'Tickets', link: 'ticket', icon: <HiTicket /> },
       { name: 'Time Sheet', link: '/time-sheet', icon: <FaClipboardList /> },
       { name: 'Calendar View', link: 'Calendarview', icon: <FaCalendarWeek /> },
-      { name: 'Finance Module', link: '/finance-module', icon: <HiCurrencyDollar /> },
+      { name: 'Finance Module', link: 'finance-module', icon: <HiCurrencyDollar /> },
       { name: 'Claim Asset', link: 'assets', icon: <FaClipboardList /> },
     ],
     pm: [
