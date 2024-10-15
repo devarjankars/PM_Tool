@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from 'react';
-import userLogo from "../../../Asset/user.png";
+import userLogo from "../../../Asset/User.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdLogOut } from "react-icons/io";
 
