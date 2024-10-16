@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
  import { FaEye, FaEyeSlash} from 'react-icons/fa'; 
 import axios from 'axios';
@@ -10,12 +10,17 @@ import axios from 'axios';
 
 function Login() {
 //input field make it required field after testing
+const [ Remb, setRemb ]=useState(false);
 
  const [User , setUser]= useState({
   username:"",
   Password:"",
   showpwd:false,
  })
+
+
+
+ 
  
  const Navigate=useNavigate();
 
@@ -24,6 +29,9 @@ function Login() {
   const HanndleFrom = async(e)=>{
     try {
       e.preventDefault();
+      
+      
+      if(Remb=== true){localStorage.setItem("user", JSON.stringify(User))}
   
       Navigate('/Dashboard')
   
@@ -52,7 +60,29 @@ function Login() {
    
   console.log( User);
 
+
   }
+
+  useEffect(  ()=>{
+    const userInfo=(localStorage.getItem("user"))
+    if(userInfo!==null) {
+      setUser({
+        userName:userInfo.userName,
+        Password:userInfo.Password,
+        showpwd:false,
+       })
+    }
+
+
+  },[])
+
+
+ const  HandleCheckboxChanges =()=>{
+  console.log('Debug the handle checkbox fun')
+  setRemb(!Remb)
+
+
+ }
 
 
 
@@ -78,7 +108,9 @@ function Login() {
         </div>
 
         <Link to={'/forgotpassword'} className=' my-0 py-2   text-red-600  font-medium float-right hover:text-red-400'>Forgot Password?</Link> 
-       <div className='flex gap-4 mt-12 mx-2 text-slate-800 font-medium'><input type="checkbox"  /> <h3 className='text-black font-sans text-lg'>Remember Me </h3></div>
+       <div className='flex gap-4 mt-12 mx-2 text-slate-800 font-medium'>
+        <input type="checkbox"  onClick={HandleCheckboxChanges} 
+        /> <h3 className='text-black font-sans text-lg' >Remember Me </h3></div>
         <button type="submit" className='py-4 my-2 bg-gradient-to-tr from-red-600 to-red-900 text-white w-full rounded-md hover:bg-slate-900 text-lg font-sans' onClick={HanndleFrom}>Sign In</button>
       </form>
     </div>
