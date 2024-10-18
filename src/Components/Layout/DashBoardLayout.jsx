@@ -4,10 +4,11 @@ import Header from "./Header/Header";
 import { Outlet } from "react-router-dom";
 import MainFooter from "./Footer/MainFooter";
 import { HandleSlider } from "../../Utils/Slice/SliderSlice";
+import Resources from "../Pages/ResourceAllocation/Resources";
 
 
 const DashBoardLayout = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const [openMenu, setOpenMenu] = useState(false);
   return (
     <div className="md:h-[100vh]  md:w-[100vw] md:flex relative   ">
@@ -24,6 +25,7 @@ const DashBoardLayout = () => {
 
         
         <Outlet/>
+        <Resources/>
       </div >
       <div className="mb-0 md:h-[8%] md:w-[100%] px-0 items-center mx-auto bg-[#ddd8d8] rounded-lg  fixed text-lg text-slate-800">
       <MainFooter/>

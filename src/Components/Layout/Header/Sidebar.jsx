@@ -22,7 +22,7 @@ const Sidebar = ({isOpen, setIsOpen}) => {
       { name: 'Clients', link: 'clients', icon: <PiSuitcaseSimpleBold /> },
       { name: 'Projects', link: 'projects', icon: <GoProjectRoadmap /> },
       { name: 'Task', link: 'task', icon: <MdTask /> },
-      { name: 'Employee', link: '/employee', icon: <PiUsersFill /> },
+      { name: 'Employee', link: 'employee', icon: <PiUsersFill /> },
       { name: 'Reports', link: '/reports', icon: <BiSolidReport /> },
       { name: 'Tickets', link: 'ticket', icon: <HiTicket /> },
       { name: 'Time Sheet', link: '/time-sheet', icon: <FaClipboardList /> },
