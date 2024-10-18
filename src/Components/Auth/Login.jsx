@@ -33,7 +33,7 @@ const [ Remb, setRemb ]=useState(false);
       
       if(Remb=== true){localStorage.setItem("user", JSON.stringify(User))}
   
-      Navigate('/Dashboard')
+      Navigate('dashboard/resourceAllocation')
   
     } catch (error) {
         Navigate('/error');

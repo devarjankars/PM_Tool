@@ -9,6 +9,7 @@ import CalendarComponent from './Pages/CalendarView/CalendarComponent';
 import DashBoardLayout from './Layout/DashBoardLayout';
 import Ticket from './Pages/Ticket/Ticket'; 
 import FM from './Pages/pages/FM';
+import Resources from './Pages/ResourceAllocation/Resources';
 
 function Browse (){
 
@@ -20,9 +21,16 @@ const appRoutes= createBrowserRouter([
         errorElement:<>Something Went Wrong</>
       },
       {
-      path:'/dashboard',
-      element:<DashBoardLayout/>,
+      path:'dashboard',
+      element:<DashBoardLayout/> ,
+
       children:[
+       {
+        path:'resourceAllocation',
+        element:<Resources/>
+
+       },
+       
         {
           path:'assets',
           element: <Asset/>

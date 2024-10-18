@@ -18,7 +18,7 @@ const Sidebar = ({isOpen, setIsOpen}) => {
   
   const sidebarSections = {
     admin: [
-      { name: 'Resource Allocation', link: 'resource-allocation', icon: <BiSolidUserDetail /> },
+      { name: 'Resource Allocation', link: 'resourceAllocation', icon: <BiSolidUserDetail /> },
       { name: 'Clients', link: 'clients', icon: <PiSuitcaseSimpleBold /> },
       { name: 'Projects', link: 'projects', icon: <GoProjectRoadmap /> },
       { name: 'Task', link: 'task', icon: <MdTask /> },
